@@ -1,4 +1,4 @@
-package com.skilldistillery.xtreme.entities;
+package com.skilldistillery.workout.entities;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

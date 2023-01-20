@@ -1,4 +1,4 @@
-package com.skilldistillery.xtreme.entities;
+package com.skilldistillery.workout.entities;
 
 import java.util.Objects;
 

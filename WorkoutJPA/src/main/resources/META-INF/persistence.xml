@@ -4,7 +4,7 @@
 	 <provider>org.hibernate.jpa.HibernatePersistenceProvider </provider>
     
     <!--Beginning Entities  -->
-    <class>com.skilldistillery.xtreme.entities.Workout</class>
+    <class>com.skilldistillery.workout.entities.Workout</class>
     
     
 	<!-- Ending Entities  -->
