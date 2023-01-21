@@ -2,6 +2,7 @@ package com.skilldistillery.workout.entities;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,6 +16,20 @@ public class Workout {
 	private int id;
 	
 	private String name;
+	
+	@Column(name = "recommended_set")
+	private String set;
+	
+	@Column(name = "recommended_rep")
+	private String rep;
+	
+	private String description;
+	
+	@Column(name = "image_url")
+	private String imageUrl;
+	
+	@Column(name = "body_part")
+	private String bodyPart;
 
 	public Workout() {
 		super();
@@ -36,6 +51,46 @@ public class Workout {
 		this.name = name;
 	}
 
+	public String getSet() {
+		return set;
+	}
+
+	public void setSet(String set) {
+		this.set = set;
+	}
+
+	public String getRep() {
+		return rep;
+	}
+
+	public void setRep(String rep) {
+		this.rep = rep;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+	public String getBodyPart() {
+		return bodyPart;
+	}
+
+	public void setBodyPart(String bodyPart) {
+		this.bodyPart = bodyPart;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -55,7 +110,8 @@ public class Workout {
 
 	@Override
 	public String toString() {
-		return "Workout [id=" + id + ", name=" + name + "]";
+		return "Workout [id=" + id + ", name=" + name + ", set=" + set + ", rep=" + rep + ", description=" + description
+				+ ", imageUrl=" + imageUrl + ", bodyPart=" + bodyPart + "]";
 	}
 	
 

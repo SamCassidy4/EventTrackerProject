@@ -12,7 +12,7 @@ public interface WorkoutService {
 
 	public Workout create(Workout workout);
 
-	public Workout update(int id, Workout workout);
+	public Workout updateWorkout(int id, Workout workout);
 
 	boolean deleteBy(int id);
 

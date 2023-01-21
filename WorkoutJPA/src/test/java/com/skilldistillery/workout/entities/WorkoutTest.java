@@ -41,9 +41,13 @@ class WorkoutTest {
 	}
 
 	@Test
-	void test() {
+	void test_Workout_Entity_Mapping() {
 		assertNotNull(workout);
 		assertEquals("Bench Press", workout.getName());
+		assertEquals("4-6", workout.getSet());
+		assertEquals("8-12", workout.getRep());
+		assertEquals("Pectoral muscles, shoulders, and arms", workout.getBodyPart());
+		
 	}
 
 }
