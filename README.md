@@ -22,6 +22,6 @@ Users will be able to find any exercies they want whether it be search by keywor
 | GET           | /api/workouts |              | Lists all available Workouts       |                  
 | GET           | /api/workout/{id}|           | Lists a workout by ID              |
 | POST          | /api/workouts | JSON for new Workout| Create a new Workout        |
-| PUT           | /api/worouts/{id}| JSON for update Workout| Updates and existing Workout |
+| PUT           | /api/workouts/{id}| JSON for update Workout| Updates and existing Workout |
 | DELETE        | /api/workouts/{id}|          | Deletes an existing workout        |
 
