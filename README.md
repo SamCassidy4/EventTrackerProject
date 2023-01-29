@@ -37,4 +37,8 @@ Users will be able to find any exercies they want whether it be search by keywor
 
 ![Screenshot 2023-01-29 at 4 04 10 PM](https://user-images.githubusercontent.com/103699625/215360917-340137cb-50b9-414d-8380-94c6a073eeea.png)
 
+# Future Implementations
+For the future of this project it would be great to add a legitimate front-end as well as the addition of a user in the database schema. This would in turn allow user's to login and keep track of their own workouts and monitor their progress in the gym or at home. An addition of a navBar would be desirable in order to quickly maneuver the website.
+
+
 
