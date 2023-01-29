@@ -35,5 +35,6 @@ Users will be able to find any exercies they want whether it be search by keywor
 
 # Schema
 
-(
+![Screenshot 2023-01-29 at 4 04 10 PM](https://user-images.githubusercontent.com/103699625/215360917-340137cb-50b9-414d-8380-94c6a073eeea.png)
+
 
