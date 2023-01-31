@@ -4,6 +4,8 @@ window.addEventListener('load', function(e) {
 	init();
 })
 
+let workouts;
+
 function init() {
 
 	loadWorkouts();
@@ -31,7 +33,7 @@ function init() {
 		xhr.onreadystatechange = function() {
 			if (xhr.readyState === 4) {
 				if (xhr.status === 200) {
-					window.workouts = JSON.parse(xhr.responseText);
+					workouts = JSON.parse(xhr.responseText);
 					displayWorkouts(JSON.parse(xhr.responseText));
 					console.log(JSON.parse(xhr.responseText));
 				}
@@ -160,12 +162,13 @@ function init() {
 		removeWorkout();
 		let sibling = e.target.previousElementSibling
 		let content = document.createElement('div');
-		let workoutId = e.target.previousElementSibling.previousElementSibling.previousElementSibling.textContent;
-		let exercises = window.workouts[workoutId - 1].exercises;
+		console.log(e.target);
+		//let workoutId = e.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.textContent;
+		//let exercises = workouts[workoutId - 1].workout;
 
-		for (let ex of exercises) {
+		for (let ex of workouts) {
 			let para = document.createElement('p');
-			para.textContent = ex.name + "Reps: " + ex.rep + "Sets: " + ex.set + "Body Part: " + ex.bodyPart;
+			para.textContent = ex.name + " " + "Reps: " + ex.rep + "Sets: " + ex.set + "Body Part: " + ex.bodyPart;
 			content.appendChild(para);
 		}
 		let updateBtn = document.createElement('input');
@@ -191,8 +194,8 @@ function init() {
 	let updateWorkoutForm = function(e) {
 		e.preventDefault();
 		let workoutId = +e.target.parentElement.parentElement.previousElementSibling.previousElementSibling.textContent;
-		let workout = window.workouts[workoutId - 1];
-		let div = target.parentElement;
+		let workout = workouts[workoutId - 1];
+		let div = workout.parentElement;
 		div.textContent = "";
 		let form = document.createElement('form');
 
