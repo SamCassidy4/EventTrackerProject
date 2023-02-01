@@ -2,6 +2,7 @@
 window.addEventListener('load', function(e) {
 	console.log('Page Loaded');
 	init();
+	document.addEventListener('click',updateWorkout);
 })
 
 let workouts;
@@ -143,6 +144,7 @@ function init() {
 			tr.appendChild(description);
 
 			let button = document.createElement('input');
+			button.id = workout.id;
 			button.type = 'submit';
 			button.value = 'details';
 			button.addEventListener('click', displayDetails);
@@ -160,6 +162,8 @@ function init() {
 	function displayDetails(e) {
 		e.preventDefault();
 		removeWorkout();
+		let workoutId = e.target.id;
+		console.log(workoutId);
 		let sibling = e.target.previousElementSibling
 		let content = document.createElement('div');
 		console.log(e.target);
@@ -167,13 +171,16 @@ function init() {
 		//let exercises = workouts[workoutId - 1].workout;
 
 		for (let ex of workouts) {
+			if(ex.id == workoutId){
 			let para = document.createElement('p');
 			para.textContent = ex.name + " " + "Reps: " + ex.rep + "Sets: " + ex.set + "Body Part: " + ex.bodyPart;
 			content.appendChild(para);
+			}
 		}
 		let updateBtn = document.createElement('input');
 		updateBtn.type = 'submit';
 		updateBtn.value = 'update';
+		updateBtn.id = e.target.id;
 		updateBtn.addEventListener('click', updateWorkoutForm);
 		let deleteBtn = document.createElement('input');
 		deleteBtn.type = 'submit';
@@ -193,9 +200,12 @@ function init() {
 
 	let updateWorkoutForm = function(e) {
 		e.preventDefault();
-		let workoutId = +e.target.parentElement.parentElement.previousElementSibling.previousElementSibling.textContent;
+		let workoutId = e.target.id;
+		console.log(workoutId);
 		let workout = workouts[workoutId - 1];
-		let div = workout.parentElement;
+		document.editWorkout.name.value = workout.name;
+
+		let div = document.getElementById('content');
 		div.textContent = "";
 		let form = document.createElement('form');
 
@@ -211,6 +221,13 @@ function init() {
 		let workoutId = +e.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.textContent;
 		let workout = window.workouts[workoutId - 1];
 		updateWorkout(workout, workoutId);
+	}
+	function updateWorkout(e){
+		console.log("updating workout")
+		//TODO create an object with all the fields
+		// call the AJAX method
+		// change button name
+		
 	}
 
 	let deleteWorkout = function(e) {
