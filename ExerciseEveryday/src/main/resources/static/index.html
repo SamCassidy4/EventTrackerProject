@@ -4,65 +4,38 @@
 <meta charset="UTF-8">
 <title>Workout</title>
 <script type="text/javascript" src="js/script.js"></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<h1>Church of Iron</h1>
 
-	<div id="eventList"></div>
+	<h1>Welcome to The Church of Iron</h1>
 	
-	<div id="eventDetails"></div>
-	
-	<h3> Add A New Workout</h3>
-	<form name="newWorkoutForm">
-	
-	<label for="name">Name</label>
-	<input type="text" name="name"><br>
-	
-	<label for="set">Recommended Sets</label>
-	<input type="text" name="set"><br>
-	
-	<label for="rep">Recommended Rep Range</label>
-	<input type="text" name="rep"><br>
-	
-	<label for="description">Description</label>
-	<input type="text" name="description"><br>
-	
-	<label for="imageUrl">Image Here</label>
-	<input type="text" name="imageUrl"><br>
-	
-	<label for="bodyPart">Worked Body Part(s)</label>
-	<input type="text" name="bodyPart"><br>
-	
-	<button name="addWorkoutButton">Get Swole</button>
+	<form name="newWorkout">
+		<input type="text" name="name" placeholder="Name"></input>
+		<br>
+		<input type="text" name="Description" placeholder="Description"></input>
+		<br>
+		<input name="rep" placeholder="rep"></input>
+		<br>
+		<input type="text" name="set" placeholder=Sset"></input>
+		<br>
+		<input type="text" name="bodyPart" placeholder="Body Part"></input>
+		<input type="submit" name="submit" value="Submit">
+		
 	</form>
 	
 
+	<table id ="workoutTable">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		
+	</table>
 	
-	<div id="content"></div>
-	
-	<h3> Edit Workout</h3>
-	<form name="editWorkout">
-	
-	<label for="name">Name</label>
-	<input type="text" name="name"><br>
-	
-	<label for="set">Recommended Sets</label>
-	<input type="text" name="set"><br>
-	
-	<label for="rep">Recommended Rep Range</label>
-	<input type="text" name="rep"><br>
-	
-	<label for="description">Description</label>
-	<input type="text" name="description"><br>
-	
-	<label for="imageUrl">Image Here</label>
-	<input type="text" name="imageUrl"><br>
-	
-	<label for="bodyPart">Worked Body Part(s)</label>
-	<input type="text" name="bodyPart"><br>
-	
-	<button name="addWorkoutButton">Get Swole</button>
-	</form>
+	<div id="displayWorkout"></div>
 
 </body>
 </html>
